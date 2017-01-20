@@ -1,362 +1,282 @@
-            var quotesJson =
-            [
+var rQuotes=[
    {
-      "id":130027,
       "quote":"If you can dream it, you can do it.",
       "author":"Walt Disney"
    },
    {
-      "id":163027,
       "quote":"All our dreams can come true, if we have the courage to pursue them.",
       "author":"Walt Disney"
    },
    {
-      "id":131640,
       "quote":"The way to get started is to quit talking and begin doing.",
       "author":"Walt Disney"
    },
    {
-      "id":385581,
       "quote":"The more you like yourself, the less you are like anyone else, which makes you unique.",
       "author":"Walt Disney"
    },
    {
-      "id":385580,
       "quote":"When you believe in a thing, believe in it all the way, implicitly and unquestionable.",
       "author":"Walt Disney"
    },
    {
-      "id":131655,
       "quote":"I only hope that we don't lose sight of one thing - that it was all started by a mouse.",
       "author":"Walt Disney"
    },
    {
-      "id":163730,
       "quote":"Laughter is America's most important export.",
       "author":"Walt Disney"
    },
    {
-      "id":131646,
       "quote":"You're dead if you aim only for kids. Adults are only kids grown up, anyway.",
       "author":"Walt Disney"
    },
    {
-      "id":132633,
       "quote":"When you're curious, you find lots of interesting things to do.",
       "author":"Walt Disney"
    },
    {
-      "id":100644,
       "quote":"It's kind of fun to do the impossible.",
       "author":"Walt Disney"
    },
    {
-      "id":106912,
       "quote":"Look deep into nature, and then you will understand everything better.",
       "author":"Albert Einstein"
    },
    {
-      "id":131187,
       "quote":"Try not to become a man of success, but rather try to become a man of value.",
       "author":"Albert Einstein"
    },
    {
-      "id":151946,
       "quote":"Joy in looking and comprehending is nature's most beautiful gift.",
       "author":"Albert Einstein"
    },
    {
-      "id":108304,
       "quote":"Education is what remains after one has forgotten what one has learned in school.",
       "author":"Albert Einstein"
    },
    {
-      "id":125154,
       "quote":"Whoever is careless with the truth in small matters cannot be trusted with important matters.",
       "author":"Albert Einstein"
    },
    {
-      "id":148802,
       "quote":"The true sign of intelligence is not knowledge but imagination.",
       "author":"Albert Einstein"
    },
    {
-      "id":133991,
       "quote":"Insanity: doing the same thing over and over again and expecting different results.",
       "author":"Albert Einstein"
    },
    {
-      "id":121993,
       "quote":"We cannot solve our problems with the same thinking we used when we created them.",
       "author":"Albert Einstein"
    },
    {
-      "id":100015,
       "quote":"Only two things are infinite, the universe and human stupidity, and I'm not sure about the former.",
       "author":"Albert Einstein"
    },
    {
-      "id":136891,
       "quote":"Peace cannot be kept by force; it can only be achieved by understanding.",
       "author":"Albert Einstein"
    },
    {
-      "id":648177,
       "quote":"Information is power. But like all power, there are those who want to keep it for themselves.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648168,
       "quote":"Big stories need human stakes.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648154,
       "quote":"Assume nobody else has any idea what they're doing, either.",
       "author":"Aaron Swartz"
    },
    {
-      "id":482336,
       "quote":"We need to download scientific journals and upload them to file-sharing networks.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648153,
       "quote":"Say yes to everything.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648165,
       "quote":"I first met Jimbo Wales, the face of Wikipedia, when he came to speak at Stanford.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648174,
       "quote":"Nearly 75,000 Demand Progress members have urged Congress to fix the Patriot Act.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648152,
       "quote":"Computers will be able to do all the mundane tasks in our daily lives.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648156,
       "quote":"There's all sorts of stuff people want to publish anonymously.",
       "author":"Aaron Swartz"
    },
    {
-      "id":648181,
       "quote":"Senator Wyden continues to be the Senate's truest champion of an open Internet.",
       "author":"Aaron Swartz"
    },
    {
-      "id":109299,
       "quote":"One good thing about music, when it hits you, you feel no pain.",
       "author":"Bob Marley"
    },
    {
-      "id":578990,
       "quote":"Truth is everybody is going to hurt you: you just gotta find the ones worth suffering for.",
       "author":"Bob Marley"
    },
    {
-      "id":382613,
       "quote":"The good times of today, are the sad thoughts of tomorrow.",
       "author":"Bob Marley"
    },
    {
-      "id":384466,
       "quote":"Open your eyes, look within. Are you satisfied with the life you're living?",
       "author":"Bob Marley"
    },
    {
-      "id":578970,
       "quote":"Don't gain the world and lose your soul; wisdom is better than silver or gold.",
       "author":"Bob Marley"
    },
    {
-      "id":388596,
       "quote":"Get up, stand up, Stand up for your rights. Get up, stand up, Don't give up the fight.",
       "author":"Bob Marley"
    },
    {
-      "id":167105,
       "quote":"Rastafari not a culture, it's a reality.",
       "author":"Bob Marley"
    },
    {
-      "id":578973,
       "quote":"I don't know how to live good. I only know how to suffer.",
       "author":"Bob Marley"
    },
    {
-      "id":379680,
       "quote":"None but ourselves can free our minds.",
       "author":"Bob Marley"
    },
    {
-      "id":109298,
       "quote":"Man is a universe within himself.",
       "author":"Bob Marley"
    },
    {
-      "id":383809,
       "quote":"Mistakes are always forgivable, if one has the courage to admit them.",
       "author":"Bruce Lee"
    },
    {
-      "id":378322,
       "quote":"Knowledge will give you power, but character respect.",
       "author":"Bruce Lee"
    },
    {
-      "id":386184,
       "quote":"A wise man can learn more from a foolish question than a fool can learn from a wise answer.",
       "author":"Bruce Lee"
    },
    {
-      "id":379708,
       "quote":"Showing off is the fool's idea of glory.",
       "author":"Bruce Lee"
    },
    {
-      "id":385152,
       "quote":"Take things as they are. Punch when you have to punch. Kick when you have to kick.",
       "author":"Bruce Lee"
    },
    {
-      "id":384114,
       "quote":"If you love life, don't waste time, for time is what life is made up of.",
       "author":"Bruce Lee"
    },
    {
-      "id":110197,
       "quote":"The less effort, the faster and more powerful you will be.",
       "author":"Bruce Lee"
    },
    {
-      "id":413510,
       "quote":"The key to immortality is first living a life worth remembering.",
       "author":"Bruce Lee"
    },
    {
-      "id":378320,
       "quote":"A quick temper will make a fool of you soon enough.",
       "author":"Bruce Lee"
    },
    {
-      "id":384548,
       "quote":"If you spend too much time thinking about a thing, you'll never get it done.",
       "author":"Bruce Lee"
    },
    {
-      "id":382655,
       "quote":"History repeats itself, first as tragedy, second as farce.",
       "author":"Karl Marx"
    },
    {
-      "id":109309,
       "quote":"Workers of the world unite; you have nothing to lose but your chains.",
       "author":"Karl Marx"
    },
    {
-      "id":382342,
       "quote":"The only antidote to mental suffering is physical pain.",
       "author":"Karl Marx"
    },
    {
-      "id":136396,
       "quote":"From each according to his abilities, to each according to his needs.",
       "author":"Karl Marx"
    },
    {
-      "id":136372,
       "quote":"Religion is the opium of the masses.",
       "author":"Karl Marx"
    },
    {
-      "id":157970,
       "quote":"Nothing can have value without being an object of utility.",
       "author":"Karl Marx"
    },
    {
-      "id":384275,
       "quote":"Social progress can be measured by the social position of the female sex.",
       "author":"Karl Marx"
    },
    {
-      "id":122445,
       "quote":"Necessity is blind until it becomes conscious. Freedom is the consciousness of necessity.",
       "author":"Karl Marx"
- },
+   },
    {
-      "id":166028,
       "quote":"The production of too many useful things results in too many useless people.",
       "author":"Karl Marx"
- },
+   },
    {
-      "id":379210,
       "quote":"Medicine heals doubts as well as diseases.",
       "author":"Karl Marx"
- },
+   },
    {
-      "id":384112,
       "quote":"Know thy self, know thy enemy. A thousand battles, a thousand victories.",
       "author":"Sun Tzu"
    },
    {
-      "id":383158,
       "quote":"The supreme art of war is to subdue the enemy without fighting.",
       "author":"Sun Tzu"
- },
+   },
    {
-      "id":385644,
       "quote":"Know your enemy and know yourself and you can fight a hundred battles without disaster.",
       "author":"Sun Tzu"
    },
    {
-      "id":138178,
       "quote":"Pretend inferiority and encourage his arrogance.",
       "author":"Sun Tzu"
    },
    {
-      "id":383904,
       "quote":"He who knows when he can fight and when he cannot, will be victorious.",
       "author":"Sun Tzu"
    },
    {
-      "id":138184,
       "quote":"Secret operations are essential in war; upon them the army relies to make its every move.",
       "author":"Sun Tzu"
    },
    {
-      "id":710972,
       "quote":"A good commander is benevolent and unconcerned with fame.",
       "author":"Sun Tzu"
    },
    {
-      "id":717951,
       "quote":"He will win who knows when to fight and when not to fight.",
       "author":"Sun Tzu"
    },
    {
-      "id":717952,
       "quote":"If your opponent is of choleric temper, irritate him.",
       "author":"Sun Tzu"
    },
    {
-      "id":155752,
       "quote":"If you know the enemy and know yourself you need not fear the results of a hundred battles.",
       "author":"Sun Tzu"
    }
 ];
-
-
-/*
-567.2	 578.8
-640.9  630.6
-622.8  632.9
-675.1  623.8
-760    720
-3220   3186,1 = 33,9*/

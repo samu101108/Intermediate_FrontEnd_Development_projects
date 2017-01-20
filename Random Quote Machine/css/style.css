@@ -1,18 +1,30 @@
+body{
+    /*background-color: black;*/
+}
 h1 {
   font-family: 'Allura', cursive;
   font-size: 6rem;
 }
 blockquote{
   font-family: 'Rufina', serif;
-  margin: 4rem;
   font-size: 2rem;
 }
+/*Override bootstrap border*/
+blockquote {
+	position: relative;
+  border: none;
+}
 #box {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
     background-color: lightblue;
-    margin-top: 3rem;
+    /*margin-top: 3rem;*/
     padding-bottom: 1rem;
     border-radius: 30px;
 }
+
 
 hr.style {
   height: 30px;
@@ -30,4 +42,11 @@ hr.style:before {
   border-color: #8c8b8b;
   border-width: 0 0 1px 0;
   border-radius: 20px;
+}
+.button{
+  background-color: #f0f0f0;
+  padding: 5px 20px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 15px;
 }
