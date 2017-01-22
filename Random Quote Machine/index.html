@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="author" content="Samuel Barbosa">
     <meta charset="utf-8">
@@ -12,11 +13,6 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Allura|Rufina" rel="stylesheet">
 
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <script type="text/javascript" src="js/quotes.json"></script>
     <script type="text/javascript" src="js/randomQuoteMachine.js"></script>
 
@@ -25,28 +21,28 @@
 <body onload="randomize()">
     <div class="container">
         <div class="row">
-            <div id="box" class="col-xs-12 col-lg-7 col-lg-offset-2 text-center">
+            <div id="box" class="circle col-xs-12 col-lg-7 col-lg-offset-2 text-center">
                 <h1>Random Quote Machine</h1>
                 <hr class="style">
                 <blockquote class="text-right">
-                    <p id="quote">
-                        <i class="fa fa-quote-left fa fa-pull-left" aria-hidden="true"></i>
-                        <!-- Here comes a random quote from quotes.json -->
-                        <i class="fa fa-quote-right fa fa-pull-right" aria-hidden="true"></i>
+                    <p>
+                        <i class="quote fa fa-quote-left fa fa-pull-left" aria-hidden="true"></i>
+                        <span id="quote" class="quote"><!-- Here comes a random quote from quotes.json --></span>
+                        <i class="quote fa fa-quote-right fa fa-pull-right" aria-hidden="true"></i>
                     </p>
-                    <footer id="author">
-                        <!-- Here comes a random author from quotes.json -->
+                    <footer id="author" class="quote">
+                        <span><!-- Here comes a random author from quotes.json --></span>
                     </footer>
                 </blockquote>
 
                 <div id="buttons" class="text-right">
 
-                    <a href="#" onclick="randomize()">
-                        <div class="button"><i class="fa fa-circle-o-notch fa-spin fa-fw"></i>Generate</div>
+                    <a href="#" class="button" onclick="randomize();">
+                        <div><i class="fa fa-refresh"></i> Generate</div>
                     </a>
 
-                    <a id="tweet-quote" title="Tweet this quote!" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('" ' + currentQuote + ' " ' + currentAuthor));">
-                        <div class="button"><i class="fa fa-twitter" aria-hidden="true"></i>Twit</button>
+                    <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('" ' + currentQuote + ' " ' + currentAuthor));">
+                        <div><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
                         </div>
                     </a>
                     <!-- FIX LINE ABOVE TO SHARE THE QUOTE ON TWITTER -->
@@ -61,6 +57,20 @@
     <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/b5d24ce853.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".quote").fadeIn(1000);
+    });
+
+    $(".button").click(function() {
+        $(".quote").fadeOut(0, function() {
+            $(".quote").fadeIn(1000);
+        });
+    });
+    </script>
+
 </body>
 
 </html>
