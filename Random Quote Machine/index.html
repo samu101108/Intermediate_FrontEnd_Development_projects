@@ -27,11 +27,15 @@
                 <blockquote class="text-right">
                     <p>
                         <i class="quote fa fa-quote-left fa fa-pull-left" aria-hidden="true"></i>
-                        <span id="quote" class="quote"><!-- Here comes a random quote from quotes.json --></span>
+                        <span id="quote" class="quote">
+                        Here comes a random quote from quotes.json
+                        </span>
+
+
                         <i class="quote fa fa-quote-right fa fa-pull-right" aria-hidden="true"></i>
                     </p>
                     <footer id="author" class="quote">
-                        <span><!-- Here comes a random author from quotes.json --></span>
+                        <span>Here comes a random author from quotes.json</span>
                     </footer>
                 </blockquote>
 
@@ -41,14 +45,12 @@
                         <div><i class="fa fa-refresh"></i> Generate</div>
                     </a>
 
-                    <a class="button" id="tweet-quote" title="Tweet this quote!" target="_blank" href="https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('" ' + currentQuote + ' " ' + currentAuthor));">
-                        <div><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</button>
-                        </div>
-                    </a>
-                    <!-- FIX LINE ABOVE TO SHARE THE QUOTE ON TWITTER -->
-                    <!--
-        $('#tweet-quote').attr('href', 'https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=' + encodeURIComponent('"' + currentQuote + '" ' + currentAuthor));
-              } -->
+
+                    <!-- button test -->
+                    <a class="twitter-share-button" id="twitterlink" href="https://twitter.com/share" data-size="large" data-via="samu101108">Tweet</a>
+                    <script type="text/javascript">
+                    </script>
+                    <!-- end button test -->
 
                 </div>
             </div>
@@ -60,15 +62,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script type="text/javascript">
-    $(document).ready(function(){
-      $(".quote").fadeIn(1000);
-    });
-
-    $(".button").click(function() {
-        $(".quote").fadeOut(0, function() {
+        $(document).ready(function() {
             $(".quote").fadeIn(1000);
         });
-    });
+
+        $(".button").click(function() {
+            $(".quote").fadeOut(0, function() {
+                $(".quote").fadeIn(1000);
+            });
+        });
     </script>
 
 </body>
