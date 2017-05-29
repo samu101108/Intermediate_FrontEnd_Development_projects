@@ -1,35 +1,24 @@
-body {
-    /*background-color: black;*/
-}
-
 h1 {
     font-family: 'Allura', cursive;
-    font-size: 6rem;
+    font-size: 3em;
 }
-
 blockquote {
     font-family: 'Rufina', serif;
-    font-size: 2rem;
-    height: 132px
-}
-
-/*Override bootstrap border*/
-
-blockquote {
+    min-height: 132px;
+    /*Override bootstrap border*/
     position: relative;
     border: none;
 }
-
 #box {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: lightblue;
-    /*margin-top: 3rem;*/
-    padding-bottom: 1rem;
+    background-color: #cddcf4;
+    /*margin-top: 3em;*/
+    padding-bottom: 1em;
     border-radius: 30px;
 }
-
+/*Putting HR o be curve at the edges*/
 hr.style {
     height: 30px;
     border-style: solid;
@@ -37,7 +26,6 @@ hr.style {
     border-width: 1px 0 0 0;
     border-radius: 20px;
 }
-
 hr.style:before {
     display: block;
     content: "";
@@ -48,7 +36,7 @@ hr.style:before {
     border-width: 0 0 1px 0;
     border-radius: 20px;
 }
-
+/*end of Putting HR o be curve at the edges*/
 .button {
     background-color: #f0f0f0;
     padding: 5px 20px;
@@ -56,7 +44,6 @@ hr.style:before {
     display: inline-block;
     border-radius: 15px;
 }
-
 .quote {
   display: none;
 }
