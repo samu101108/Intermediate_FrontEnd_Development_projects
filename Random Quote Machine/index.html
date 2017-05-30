@@ -51,9 +51,18 @@
                     </a>
 
                     <!-- button twitter -->
-                    <a class="button twitter-share-button" id="twitterlink" href="https://twitter.com/share"
-                    data-size="large" data-via="samu101108">
-                    <i class="fa fa-twitter"></i></a>
+
+                    <a class="button twitter-share-button"
+                    id="twitterlink"
+                    href="https://twitter.com/intent/tweet"
+                    data-text="Inpirational quotes of design"
+                    data-via="samu101108"
+                    data-hashtags="fcc, randomQuoteMachine">
+                  <i class="fa fa-twitter"></i></a>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
 
                 </div>
             </div>
@@ -64,12 +73,12 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            $(".quote").fadeIn(1000);
+            $(".quote").fadeIn(2000);
         });
 
         $(".button").click(function() {
             $(".quote").fadeOut(0, function() {
-                $(".quote").fadeIn(1000);
+                $(".quote").fadeIn(2000);
             });
         });
     </script>
