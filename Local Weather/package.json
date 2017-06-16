@@ -1,0 +1,8 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "An app that uses geolocation and weather forecast APIs to show local weather.",
+  "main": "index.html",
+  "author": "Samuel Barbosa",
+  "license": "MIT"
+}
