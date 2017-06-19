@@ -5,37 +5,102 @@
     <meta charset="utf-8">
     <title>The Local Weather</title>
     <!-- begin:css -->
-    <!-- end:css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <!-- end:css -->
+    <style>
+        .temp {
+            font-size: 4em;
+        }
+
+        .forecast-day {
+            border-bottom: 1px solid #999;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>How is the weather today?</h1>
-    <!-- <span class="temp">50 &#8457; or &#8451;</span> -->
+    <div class="container-fluid">
 
-    <ul class="nav nav-tabs">
-      <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
-      <li><a data-toggle="tab" href="#menu1">Menu 1</a></li>
-      <li><a data-toggle="tab" href="#menu2">Menu 2</a></li>
-    </ul>
 
-    <div class="tab-content">
-      <div id="home" class="tab-pane fade in active">
-        <h3>HOME</h3>
-        <p>Some content.</p>
-      </div>
-      <div id="menu1" class="tab-pane fade">
-        <h3>Menu 1</h3>
-        <p>Some content in menu 1.</p>
-      </div>
-      <div id="menu2" class="tab-pane fade">
-        <h3>Menu 2</h3>
-        <p>Some content in menu 2.</p>
-      </div>
+        <h1>
+      <i class="fa fa-map-marker"></i>
+      <span class="city">Recife</span> -
+      <span class="neighbor">Boa viagem</span>
+    </h1>
+
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Today</a></li>
+            <li><a data-toggle="tab" href="#menu1">4 days</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="home" class="tab-pane fade in active">
+                <p class="temp">50&#8451; </p>
+                <!--Farenhite simbol &#8457;-->
+                <p class="desc">Pouco Nublado</p>
+                <p><span class="mma">28&#8451;</span> /
+                    <span class="min">22&#8451;</span> -
+                    <span>Sensação Termica: 28&#8451;</span>
+                </p>
+                <p>Umidade: <span>100%</span></p>
+                <p>Vento: <span>N 3m/s</span></p>
+
+            </div>
+            <div id="menu1" class="tab-pane fade">
+
+                <div class="row">
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +1</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +2</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +3</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +4</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
-
     <!-- begin:js -->
+    <script src="lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <!-- end:js -->
 </body>
 
