@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
     <!-- end:css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <style>
         .temp {
             font-size: 4em;
@@ -19,7 +20,12 @@
         }
     </style>
 </head>
+<!--
+API KEY OF OPEN WEATHER MAP
+&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868
 
+
+  -->
 <body>
     <div class="container-fluid">
 
@@ -46,6 +52,8 @@
                 </p>
                 <p>Umidade: <span>100%</span></p>
                 <p>Vento: <span>N 3m/s</span></p>
+
+<button id="getIt" onclick="gettingJSON()">Get JSON</button>
 
             </div>
             <div id="menu1" class="tab-pane fade">
@@ -91,7 +99,6 @@
                             </p>
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -102,6 +109,18 @@
     <script src="lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <!-- end:js -->
+    <script>
+
+      function gettingJSON(){
+        document.write("jquery loaded");
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868",
+        function(json){
+          document.write(JSON.stringify(json));
+        });
+      }
+
+    </script>
+
 </body>
 
 </html>
