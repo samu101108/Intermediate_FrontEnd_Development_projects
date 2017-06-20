@@ -43,7 +43,7 @@ API KEY OF OPEN WEATHER MAP
 
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
-                <p class="temp">50&#8451; </p>
+                <p id ="temp" class="temp">50&#8451; </p>
                 <!--Farenhite simbol &#8457;-->
                 <p class="desc">Pouco Nublado</p>
                 <p><span class="mma">28&#8451;</span> /
@@ -109,17 +109,25 @@ API KEY OF OPEN WEATHER MAP
     <script src="lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
     <script src="lib/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
     <!-- end:js -->
+
+
     <script>
 
-      function gettingJSON(){
-        document.write("jquery loaded");
-        $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868",
-        function(json){
-          document.write(JSON.stringify(json));
-        });
-      }
+if (navigator.geolocation){ // if geolocation is present, do...
+navigator.geolocation.getCurrentPosition (function(position){
+  var latitude = position.geolocation.latitude; //assign latitude to a variable
+  var longitude = longitude.geolocation.longitude; // assign longitude to a variable
 
-    </script>
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function (a) {
+    //function (a) is a callback function
+    $(document).ready(function(){
+      $("temp").html("latitude");
+    });
+
+});
+}
+)};
+</script>
 
 </body>
 
