@@ -32,8 +32,9 @@ API KEY OF OPEN WEATHER MAP
 
         <h1>
       <i class="fa fa-map-marker"></i>
-      <span class="city">Recife</span> -
-      <span class="neighbor">Boa viagem</span>
+      <span id="city">Recife</span>
+      <!-- - -->
+      <!-- <span id="neighbor">Boa viagem</span> -->
     </h1>
 
         <ul class="nav nav-tabs">
@@ -43,17 +44,16 @@ API KEY OF OPEN WEATHER MAP
 
         <div class="tab-content">
             <div id="home" class="tab-pane fade in active">
-                <p id ="temp" class="temp">50&#8451; </p>
+                <p id ="temperature" class="temp">50&#8451; </p>
                 <!--Farenhite simbol &#8457;-->
-                <p class="desc">Pouco Nublado</p>
-                <p><span class="mma">28&#8451;</span> /
-                    <span class="min">22&#8451;</span> -
-                    <span>Sensação Termica: 28&#8451;</span>
+                <p id="description">Pouco Nublado</p>
+                <p><span id="max">28&#8451;</span> /
+                    <span id="min">22&#8451;</span>
+                     <!-- - -->
+                    <!-- <span id="sen">Sensação Termica: 28&#8451;</span> -->
                 </p>
-                <p>Umidade: <span>100%</span></p>
-                <p>Vento: <span>N 3m/s</span></p>
-
-<button id="getIt" onclick="gettingJSON()">Get JSON</button>
+                <p>Umidade: <span id="umi">100%</span></p>
+                <p>Vento: <span id="wind'">N 3m/s</span></p>
 
             </div>
             <div id="menu1" class="tab-pane fade">
@@ -115,14 +115,28 @@ API KEY OF OPEN WEATHER MAP
 
 if (navigator.geolocation){ // if geolocation is present, do...
 navigator.geolocation.getCurrentPosition (function(position){
-  var latitude = position.geolocation.latitude; //assign latitude to a variable
-  var longitude = longitude.geolocation.longitude; // assign longitude to a variable
+  var latitude = position.coords.latitude; //assign latitude to a variable
+  var longitude = position.coords.longitude; // assign longitude to a variable
 
   $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function (a) {
     //function (a) is a callback function
-    $(document).ready(function(){
-      $("temp").html("latitude");
-    });
+    // $(document).ready(function(){
+    //   $("temp").html(rav);
+    // });
+
+    var temperature = Math.round(a.main.temp);
+
+    $('#temperature').html(temperature);
+    $('#city').html(a.name);
+    $('#description').html(a.weather[0].description);
+    $('#max').html(a.main.temp_max);
+    $('#min').html(a.main.temp_min);
+    // $('#sen').html();
+    $('#umi').html(a.main.humidity);
+    $('#wind').html(a.wind.speed);
+
+    console.log(latitude);
+    console.log(longitude);
 
 });
 }
