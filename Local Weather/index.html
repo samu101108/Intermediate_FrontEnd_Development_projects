@@ -32,30 +32,51 @@ API KEY OF OPEN WEATHER MAP
 
         <h1>
       <i class="fa fa-map-marker"></i>
-      <span id="city">Recife</span>
-      <!-- - -->
-      <!-- <span id="neighbor">Boa viagem</span> -->
+      <span id="city">City</span>
+      <span> - </span>
+      <span id="country">Country</span>
+      <hr>
     </h1>
 
-        <ul class="nav nav-tabs">
+        <!--<ul class="nav nav-tabs">
             <li class="active"><a data-toggle="tab" href="#home">Today</a></li>
             <li><a data-toggle="tab" href="#menu1">4 days</a></li>
         </ul>
 
         <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-                <p id ="temperature" class="temp">50&#8451; </p>
-                <!--Farenhite simbol &#8457;-->
-                <p id="description">Pouco Nublado</p>
-                <p><span id="max">28&#8451;</span> /
-                    <span id="min">22&#8451;</span>
-                     <!-- - -->
-                    <!-- <span id="sen">Sensação Termica: 28&#8451;</span> -->
-                </p>
-                <p>Umidade: <span id="umi">100%</span></p>
-                <p>Vento: <span id="wind'">N 3m/s</span></p>
+            
+            <div id="home" class="tab-pane fade in active">-->
+             
+             <div class="row">
+                <div class="col-xs-8 col-lg-12">
+                    <p id="temperature">Temperature</p>
+                    <p id="main">Main weather</p>
+                    <p id="description">Weather description</p>
+                    <p id="rain">Rain volume for the last 3 hours</p>
+                </div>
+        <br>
+                <div class="col-xs-4">
+                    <p>
+                        <span id="max">Max</span> /
+                        <span id="min">Min</span>
+                    </p>
+                    <p>
+                        Sunrises: <span id="sunrise">Sunrise</span> /
+                        Sunsets: <span id="sunset">Sunset</span>
+                    </p>
+                </div>                
+             </div>
+        <br>
+             <div class="row">
+                <div class="col-xs-12">
+                    <p>Umidade: <span id="humi">Humidity</span></p>
+                    <p>Vento: <span id="wind">Wind</span></p>             
+                </div>                 
+             </div>
 
             </div>
+
+<!--
             <div id="menu1" class="tab-pane fade">
 
                 <div class="row">
@@ -101,8 +122,8 @@ API KEY OF OPEN WEATHER MAP
                     </div>
                 </div>
 
-            </div>
-        </div>
+            </div>-->
+        <!--</div>-->
 
     </div>
     <!-- begin:js -->
@@ -118,21 +139,25 @@ navigator.geolocation.getCurrentPosition (function(position){
   var latitude = position.coords.latitude; //assign latitude to a variable
   var longitude = position.coords.longitude; // assign longitude to a variable
 
-  $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function (a) {
-    //function (a) is a callback function
-    // $(document).ready(function(){
-    //   $("temp").html(rav);
-    // });
+  $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=metric&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function (a) {
 
     var temperature = Math.round(a.main.temp);
 
     $('#temperature').html(temperature);
+    
     $('#city').html(a.name);
+    $('#country').html(a.sys.country);
+
     $('#description').html(a.weather[0].description);
+    $('#main').html(a.weather[0].main);
+    // $('#rain').html(a.rain.3h);//unespected token
+
     $('#max').html(a.main.temp_max);
     $('#min').html(a.main.temp_min);
-    // $('#sen').html();
-    $('#umi').html(a.main.humidity);
+    $('#sunrise').html(a.sys.sunrise);
+    $('#sunset').html(a.sys.sunset);
+
+    $('#humi').html(a.main.humidity);
     $('#wind').html(a.wind.speed);
 
     console.log(latitude);
