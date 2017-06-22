@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>The Local Weather</title>
+    <!-- begin:css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+    <!-- end:css -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <style>
+        .temp {
+            font-size: 4em;
+        }
+
+        .forecast-day {
+            border-bottom: 1px solid #999;
+        }
+    </style>
+</head>
+<!--
+API KEY OF OPEN WEATHER MAP
+&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868
+
+
+  -->
+<body>
+    <div class="container-fluid text-center">
+
+
+        <h1>
+      <i class="fa fa-map-marker"></i>
+      <span id="city">City</span>
+      <span> - </span>
+      <span id="country">Country</span>
+      <hr>
+    </h1>
+
+        <!--<ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#home">Today</a></li>
+            <li><a data-toggle="tab" href="#menu1">4 days</a></li>
+        </ul>
+
+        <div class="tab-content">
+
+            <div id="home" class="tab-pane fade in active">-->
+
+             <div class="row">
+                <div class="">
+                    <p id="temperature">Temperature</p>
+                    <p id="main">Main weather</p>
+                    <p id="description">Weather description</p>
+                    <p id="rain">Rain volume for the last 3 hours</p>
+                </div>
+                <div class="">
+                    <p>
+                        <span id="max">Max</span> /
+                        <span id="min">Min</span>
+                    </p>
+                    <p>
+                        Sunrises: <span id="sunrise">Sunrise</span> /
+                        Sunsets: <span id="sunset">Sunset</span>
+                    </p>
+                </div>
+             </div>
+        <br>
+             <!-- <div class="row">
+                <div class="col-xs-12">
+                    <p>Umidade: <span id="humi">Humidity</span></p>
+                    <p>Vento: <span id="wind">Wind</span></p>
+                </div>
+             </div> -->
+
+            </div>
+
+<!--
+            <div id="menu1" class="tab-pane fade">
+
+                <div class="row">
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +1</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +2</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +3</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="forecast-day">
+                            <p>Day +4</p>
+                            <p><i class="fa fa-cloud-download fa-2x"></i></p>
+                            <p><span class="mma">28&#8451;</span> /
+                                <span class="min">22&#8451;</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>-->
+        <!--</div>-->
+
+    </div>
+    <!-- begin:js -->
+    <script src="lib/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="lib/bootstrap/dist/js/bootstrap.min.js" charset="utf-8"></script>
+    <!-- end:js -->
+
+
+    <script>
+
+if (navigator.geolocation){ // if geolocation is present, do...
+navigator.geolocation.getCurrentPosition (function(position){
+  var latitude = position.coords.latitude; //assign latitude to a variable
+  var longitude = position.coords.longitude; // assign longitude to a variable
+
+  $.getJSON("https://api.openweathermap.org/data/2.5/weather?lat="+latitude+"&lon="+longitude+"&units=metric&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function (a) {
+
+    var temperature = Math.round(a.main.temp);
+
+    $('#temperature').html(temperature);
+
+    $('#city').html(a.name);
+    $('#country').html(a.sys.country);
+
+    $('#description').html(a.weather[0].description);
+    $('#main').html(a.weather[0].main);
+    // $('#rain').html(a.rain.3h);//unespected token
+
+    $('#max').html(a.main.temp_max);
+    $('#min').html(a.main.temp_min);
+    $('#sunrise').html(a.sys.sunrise);
+    $('#sunset').html(a.sys.sunset);
+
+    //$('#humi').html(a.main.humidity);
+    //$('#wind').html(a.wind.speed);
+
+});
+}
+)};
+</script>
+
+</body>
+
+</html>
