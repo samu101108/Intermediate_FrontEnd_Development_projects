@@ -8,6 +8,24 @@ h1 {
   /* background: linear-gradient(#cccccc, #555599) no-repeat; */
   font-family: serif;
 }
+.basic{
+  margin: 0 auto;
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(200,200,200, 0.5), rgba(255,255,255, 0.5));
+}
+.basic p:first-child{
+  margin-top: 40px;
+}
+.basic img{
+  margin-top: -10px;
+}
 #temperature{
   font-size: 26px;
 }
