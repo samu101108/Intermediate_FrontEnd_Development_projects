@@ -32,10 +32,12 @@
         $('#temperature').html(temperature);
         $('#city').html(a.name);
         $('#main').html(a.weather[0].main);
-        // var iconurl = "http://openweathermap.org/img/w/10d.png"
-        $('#icon').html(a.weather[0].icon);
-        // tem day and night icons
-        // http://openweathermap.org/weather-conditions
+
+        // icone
+        var iconcode = a.weather[0].icon;
+        var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+        $('#wicon').attr('src', iconurl);
+
         $('#max').html(a.main.temp_max);
         $('#min').html(a.main.temp_min);
         $('#description').html(a.weather[0].description);

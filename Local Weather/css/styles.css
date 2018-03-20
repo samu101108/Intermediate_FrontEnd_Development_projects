@@ -9,7 +9,11 @@ h1 {
   font-family: serif;
 }
 #temperature{
-  font-size: 20px;
+  font-size: 26px;
+}
+#temperature::after{
+  /* content: "\2109"; //Fahrenheit */
+  content:"\2103"; //Celsius
 }
 #main{
   font-size: 16px;
@@ -24,4 +28,7 @@ h1 {
 .fa-arrow-down,
 .fa-arrow-up{
   font-size: 80%;
+}
+.fa-thermometer-half{
+  font-size: 180%;
 }
