@@ -1,0 +1,27 @@
+h1 {
+  font-size: 28px;
+}
+
+.container-fluid{
+  height: 100vh;
+  background: linear-gradient(white, lightblue) no-repeat;
+  /* background: linear-gradient(#cccccc, #555599) no-repeat; */
+  font-family: serif;
+}
+#temperature{
+  font-size: 20px;
+}
+#main{
+  font-size: 16px;
+}
+#description{
+  font-style: italic;
+  font-size: 90%;
+}
+#min, #max{
+  font-size: 85%;
+}
+.fa-arrow-down,
+.fa-arrow-up{
+  font-size: 80%;
+}
