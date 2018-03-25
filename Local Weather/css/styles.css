@@ -4,10 +4,91 @@ h1 {
 
 .container-fluid{
   height: 100vh;
-  background: linear-gradient(white, lightblue) no-repeat;
-  /* background: linear-gradient(#cccccc, #555599) no-repeat; */
   font-family: serif;
 }
+.default{
+  background: linear-gradient(#cccccc, #2e4482);
+}
+.day{
+  background: linear-gradient(white, lightblue);
+}
+
+/* For day */
+.clear_sky{
+  background-image: url(../images/clear_sky.jpeg);
+  background-size: cover;
+}
+.few_clouds{
+  background-image: url(../images/few_clouds.jpeg);
+  background-size: cover;
+}
+.scattered_clouds{
+  background-image: url(../images/scattered_clouds.jpeg);
+  background-size: cover;
+}
+.broken_clouds{
+  background-image: url(../images/broken_clouds.jpeg);
+  background-size: cover;
+}
+.shower_rain{
+  background-image: url(../images/rain_showers.jpg);
+  background-size: cover;
+}
+.rain{
+  background-image: url(../images/rain.jpg);
+  background-size: cover;
+}
+.thunderstorm{
+  background-image: url(../images/thunderstorm.jpg);
+  background-size: cover;
+}
+.snow{
+  background-image: url(../images/snow.jpg);
+  background-size: cover;
+}
+.mist{
+  background-image: url(../images/mist.jpeg);
+  background-size: cover;
+}
+
+/* For night */
+.clear_sky_night{
+  background-image: url(../images/clear_sky_night.jpeg);
+  background-size: cover;
+}
+.few_clouds_night{
+  background-image: url(../images/few_clouds_night.jpeg);
+  background-size: cover;
+}
+.scattered_clouds_night{
+  background-image: url(../images/scattered_clouds_night.jpeg);
+  background-size: cover;
+}
+.broken_clouds_night{
+  background-image: url(../images/broken_clouds_night.jpeg);
+  background-size: cover;
+}
+.shower_rain_night{
+  background-image: url(../images/rain_showers_night.jpg);
+  background-size: cover;
+}
+.rain_night{
+  background-image: url(../images/rain_night.jpeg);
+  background-size: cover;
+}
+.thunderstorm_night{
+  background-image: url(../images/thunderstorm_night.jpg);
+  background-size: cover;
+}
+.snow_night{
+  background-image: url(../images/snow_night.jpeg);
+  background-size: cover;
+}
+.mist_night{
+  background-image: url(../images/mist_night.jpeg);
+  background-size: cover;
+}
+
 .basic{
   margin: 0 auto;
   border: 1px solid #cfcfcf;
@@ -18,7 +99,7 @@ h1 {
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(rgba(200,200,200, 0.5), rgba(255,255,255, 0.5));
+  background: linear-gradient(rgba(200,200,200, 0.1), rgba(255,255,255, 0.9));
 }
 .basic p:first-child{
   margin-top: 40px;
@@ -26,8 +107,22 @@ h1 {
 .basic img{
   margin-top: -10px;
 }
+.city{
+  color: #000;
+  /* background-color: rgba(255,255,255, 0.9); */
+  text-shadow: 2px 1px 1px rgba(200,200,200, 0.9), 3px 1px 3px rgba(255,255,255, 0.9)
+  ,-1px 0px 1px rgba(255,255,255, 0.9), 0px -2px 1px rgba(255,255,255, 0.9);
+}
+.city h1{
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.extend{
+  text-shadow: white 1px 1px 10px;
+}
 #temperature{
   font-size: 26px;
+  font-weight: bold;
 }
 #temperature::after{
   /* content: "\2109"; //Fahrenheit */
