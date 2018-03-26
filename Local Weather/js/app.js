@@ -4,25 +4,19 @@
       var latitude = position.coords.latitude; //assign latitude to a variable
       var longitude = position.coords.longitude; // assign longitude to a variable
       var unit = ["&units=metric", "&units=imperial"];
-      // unit = unit[1];
-      // if(unit==1){
-      //   unit = unit[1];
-      // }
-          // fazer um assincrono com
-          // xmlHttpRequest
-          // para mudar só a unidade de medida e mostrar na tela
-          // só o 'ºF'
-          $("#unit").click(function() {
-            $.get("https://api.openweathermap.org/data/2.5/weather?lat=-8.1199301&lon=-34.945139&units=metric&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868", function(data, status) {
-              alert ("data: " + data + "\nStatus: " + status);
-            });
-          });
 
 
       var token = "&APPID=9c2f8e61e7b4c8d97a651fe5a5b04868";
       $.getJSON(url + "lat=" + latitude + "&lon=" + longitude + unit[0] + token, function(a) {
 
         var temperature = Math.round(a.main.temp);
+
+        $("#unit_switch").click(function() {
+          var cel = temperature * 9 / 5 + 32;
+          // $('#temperature').toggle(cel);
+          // $("#temperature").toggleClass("temperature");
+          $('.units').toggle("fast");
+        });
 
         $('#temperature').html(temperature);
         $('#city').html(a.name);

@@ -121,12 +121,20 @@ h1 {
   text-shadow: white 1px 1px 10px;
 }
 #temperature{
+  color: #000;
   font-size: 26px;
   font-weight: bold;
 }
-#temperature::after{
-  /* content: "\2109"; //Fahrenheit */
+/* #temperature::after{
   content:"\2103"; //Celsius
+} */
+/* #temperature::after{
+  content: "\2109";
+} */
+.units,
+.unit_degree{
+  font-size: 26px;
+  color: #000;
 }
 #main{
   font-size: 16px;
@@ -137,6 +145,21 @@ h1 {
 }
 #min, #max{
   font-size: 85%;
+}
+a{
+  color: #000;
+  text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.5);
+}
+a:visited{
+  color: #000;
+}
+a:hover {
+  color: maroon;
+  text-decoration: none;
+}
+a:active{
+  color: #000;
+  text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.8);
 }
 .fa-arrow-down,
 .fa-arrow-up{
