@@ -33,11 +33,8 @@
         var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
         $('#wicon').attr('src', iconurl);
 
-        var dia = iconcode.endsWith("d")
         // para teste das imagens
-        // iconcode = "50n";
-        if (dia == true) {
-          $("#default").toggleClass("day");
+        // iconcode = "11d";
           if (iconcode == "01d") {
             $("#default").toggleClass("clear_sky");
           }
@@ -93,7 +90,6 @@
           if (iconcode == "50n") {
             $("#default").toggleClass("mist_night");
           }
-        }
 
       });
     })
