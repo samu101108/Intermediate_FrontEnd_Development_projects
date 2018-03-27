@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="lib/font-awesome/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <!-- end:css -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -25,18 +26,13 @@
       </h1>
     </div>
 
-    <br>
-    <br>
-
     <div class="row">
       <div class="">
-        <div class="basic">
+        <div class="basic" id="unit_switch">
           <p>
-            <span id="temperature">T</span>
-            <span class="unit_degree">&deg;</span>
-            <span class="units">C</span>
-            <span class="units" style="display:none">F</span>
-            <a href="#" id="unit_switch">&nbsp;<i class="fa fa-thermometer-half"></i></a>
+            <span class="temperature">T</span>
+            <span class="symbol">&deg;C</span>
+            <span class="symbol" style="display:none">&deg;F</span>
           </p>
           <p id="main">weather</p>
           <p id="icon"><img id="wicon" src="" alt="Weather icon"></p>

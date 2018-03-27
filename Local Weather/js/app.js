@@ -11,14 +11,37 @@
 
         var temperature = Math.round(a.main.temp);
 
+        $('.temperature').text(temperature);
+        //mudar simbolo de Celsius para Fahrenheit
+        var count = 0;
+        var temp_c = 0;
+        var temp_f = 0;
         $("#unit_switch").click(function() {
-          var cel = temperature * 9 / 5 + 32;
-          // $('#temperature').toggle(cel);
-          // $("#temperature").toggleClass("temperature");
-          $('.units').toggle("fast");
+          $('.symbol').toggle("fast");
+          // fazer um if aqui
+          count++;
+          var isEven = function(number) {
+            return(number % 2 === 0)? true : false;
+            }
+            if (isEven(count) === false) {
+              tempToF();
+              $('.temperature').text(temp_f);
+            } else if(isEven(count) === true) {
+              tempToC();
+              $('.temperature').text(temp_c);
+            }
         });
+        function tempToC() {
+          temp_c = temperature;
+          return temp_c;
+        }
+        function tempToF() {
+          temp_f = temperature * 9 / 5 + 32;
+          return temp_f;
+        }
 
-        $('#temperature').html(temperature);
+
+        // $('.temperature').text(temperature);
         $('#city').html(a.name);
         $('#main').html(a.weather[0].description);
 
@@ -28,7 +51,7 @@
         $('#wicon').attr('src', iconurl);
 
         // para teste das imagens
-        // iconcode = "11d";
+        // iconcode = "50d";
           if (iconcode == "01d") {
             $("#default").toggleClass("clear_sky");
           }
